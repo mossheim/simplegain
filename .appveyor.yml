@@ -39,11 +39,11 @@ artifacts:
 - path: build\_install
   name: simplegain-windows-$(ARCH)-$(APPVEYOR_REPO_TAG_NAME)
 
-# deploy:
-# - provider: GitHub
-#   description: A simple audio volume gain plugin - Release $(APPVEYOR_REPO_TAG_NAME)
-#   artifact: simplegain-windows-$(ARCH)-$(APPVEYOR_REPO_TAG_NAME)
-#   auth_token:
-#       secure: YOUR_TOKEN_HERE
-#   on:
-#       appveyor_repo_tag: true
+deploy:
+- provider: GitHub
+  description: A simple audio volume gain plugin - Release $(APPVEYOR_REPO_TAG_NAME)
+  artifact: simplegain-windows-$(ARCH)-$(APPVEYOR_REPO_TAG_NAME)
+  auth_token:
+      secure: YOUR_TOKEN_HERE
+  on:
+      appveyor_repo_tag: true
