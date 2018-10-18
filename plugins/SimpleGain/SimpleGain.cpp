@@ -17,7 +17,7 @@ SimpleGain::SimpleGain()
 void SimpleGain::next(int nSamples)
 {
     const float * input = in(0);
-    const float * gain = in(0);
+    const float * gain = in(1);
     float * outbuf = out(0);
 
     // simple gain function
